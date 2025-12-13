@@ -1,0 +1,124 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-dark text-gray-300" role="contentinfo" itemscope itemtype="https://schema.org/Organization">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Company Info -->
+      <div class="space-y-4" itemprop="name" itemscope itemtype="https://schema.org/Organization">
+        <a href="/" class="flex items-center space-x-2">
+          <div class="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">H</span>
+          </div>
+          <span class="text-xl font-bold text-white">HighPerf<span class="text-primary">.</span></span>
+        </a>
+        <p class="text-sm" itemprop="description">
+          Building high-performance web experiences with perfect Lighthouse scores.
+        </p>
+        <div class="flex space-x-4">
+          {['Twitter', 'GitHub', 'LinkedIn'].map((social) => (
+            <a href={`https://${social.toLowerCase()}.com/yourcompany`} 
+               class="text-gray-400 hover:text-white transition-colors"
+               aria-label={`Follow us on ${social}`}
+               itemprop="sameAs">
+              <span class="sr-only">{social}</span>
+              <div class="h-8 w-8 bg-gray-800 rounded-full flex items-center justify-center">
+                {social.charAt(0)}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Product Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Product</h3>
+        <ul class="space-y-2">
+          <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+          <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+          <li><a href="#demo" class="hover:text-white transition-colors">Demo</a></li>
+          <li><a href="#api" class="hover:text-white transition-colors">API</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="/docs" class="hover:text-white transition-colors">Documentation</a></li>
+          <li><a href="/guides" class="hover:text-white transition-colors">Guides</a></li>
+          <li><a href="/community" class="hover:text-white transition-colors">Community</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Legal</h3>
+        <ul class="space-y-2">
+          <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+          <li><a href="/impressum" class="hover:text-white transition-colors">Impressum</a></li>
+          <li><a href="/datenschutz" class="hover:text-white transition-colors">Datenschutz</a></li>
+          <li><a href="/cookies" class="hover:text-white transition-colors">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <p class="text-sm">&copy; {currentYear} HighPerf. All rights reserved.</p>
+      </div>
+      <div class="flex space-x-6">
+        <a href="/sitemap.xml" class="text-sm hover:text-white transition-colors">Sitemap</a>
+        <a href="/rss.xml" class="text-sm hover:text-white transition-colors">RSS</a>
+        <button class="text-sm hover:text-white transition-colors" id="theme-toggle">
+          Dark Mode
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "HighPerf",
+      "description": "High-performance web development agency",
+      "url": "https://your-domain.vercel.app",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Tech Street",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "postalCode": "94107",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-555-123-4567",
+      "openingHours": "Mo-Fr 09:00-17:00"
+    }
+  </script>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', 
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+      );
+      themeToggle.textContent = 
+        document.documentElement.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+    });
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      themeToggle.textContent = 'Light Mode';
+    }
+  </script>
+</footer>
