@@ -1,0 +1,10 @@
+<!-- Example of optimized image -->
+<Image
+  src="/hero-image.jpg"
+  alt="Hero image"
+  width={1200}
+  height={630}
+  format="webp"
+  loading="eager"
+  decoding="async"
+/>
