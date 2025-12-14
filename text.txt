@@ -1,0 +1,6 @@
+high-performance-landing/
+├── index.html          # Main HTML file
+├── styles.css         # All CSS styles
+├── scripts.js        # All JavaScript
+├── manifest.json     # PWA manifest
+└── icons/           # Favicon icons

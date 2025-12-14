@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="High-performance landing page with perfect Lighthouse scores. Built for speed and conversions.">
+    
+    <!-- SEO Meta Tags -->
+    <title>HighPerf | Lightning-Fast Landing Pages</title>
+    <meta property="og:title" content="HighPerf | Lightning-Fast Landing Pages">
+    <meta property="og:description" content="Achieve perfect Lighthouse scores with our high-performance framework.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="scripts.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3B82F6">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HighPerf",
+        "url": "https://your-domain.com",
+        "logo": "https://your-domain.com/logo.png",
+        "sameAs": [
+            "https://github.com/highperf",
+            "https://twitter.com/highperf",
+            "https://linkedin.com/company/highperf"
+        ]
+    }
+    </script>
+    
+    <!-- Google Analytics Placeholder -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    
+    // Google Consent Mode v2
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'personalization_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted'
+    });
+    </script>
+    
+    <!-- Performance Monitoring -->
+    <script>
+    // Log Core Web Vitals
+    if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+                console.log('Performance Entry:', entry.name, entry.startTime, entry.duration);
+            }
+        });
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input'] });
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to Main Content for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header Component -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Main navigation">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/" class="logo-link">
+                    <span class="logo-icon" aria-hidden="true">🚀</span>
+                    <span class="logo-text">HighPerf<span class="logo-dot">.</span></span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- CTA & Mobile Menu -->
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary desktop-only">Get Started</a>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <div class="mobile-menu-content">
+                <a href="#features" class="mobile-nav-link">Features</a>
+                <a href="#pricing" class="mobile-nav-link">Pricing</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <a href="#contact" class="btn btn-primary mobile-only">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="hero" aria-label="Hero section">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Content Column -->
+                    <div class="hero-content">
+                        <!-- Badges -->
+                        <div class="badges">
+                            <span class="badge badge-primary">🚀 Performance Optimized</span>
+                            <span class="badge badge-secondary">⚡ 95+ Lighthouse Score</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="hero-title">
+                            <span class="hero-title-line">Build Lightning-Fast</span>
+                            <span class="hero-title-line highlight">Landing Pages</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="hero-description">
+                            Achieve perfect Lighthouse scores with our high-performance framework. 
+                            Built for speed, optimized for conversions.
+                        </p>
+
+                        <!-- Trust Elements -->
+                        <div class="trust-elements">
+                            <div class="trust-item">
+                                <div class="avatar-group">
+                                    <div class="avatar" style="background-color: #3B82F6;"></div>
+                                    <div class="avatar" style="background-color: #10B981;"></div>
+                                    <div class="avatar" style="background-color: #8B5CF6;"></div>
+                                    <div class="avatar" style="background-color: #F59E0B;"></div>
+                                </div>
+                                <span class="trust-text">500+ Developers</span>
+                            </div>
+                            
+                            <div class="trust-item">
+                                <div class="stars" aria-label="4.9 out of 5 stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="trust-text">4.9/5 Rating</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-primary btn-lg">
+                                Start Free Trial
+                                <span class="btn-icon">→</span>
+                            </a>
+                            <a href="#demo" class="btn btn-secondary btn-lg">View Demo</a>
+                        </div>
+                    </div>
+
+                    <!-- Form Column -->
+                    <div class="hero-form">
+                        <div class="form-card">
+                            <h2 class="form-title">Get Early Access</h2>
+                            <p class="form-subtitle">Join 500+ developers building faster sites</p>
+                            
+                            <!-- Lead Form -->
+                            <form id="lead-form" class="lead-form">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" id="name" name="name" required 
+                                           class="form-input" placeholder="John Doe">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="form-input" placeholder="john@example.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company" class="form-label">Company</label>
+                                    <input type="text" id="company" name="company" 
+                                           class="form-input" placeholder="Acme Inc.">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Project Details</label>
+                                    <textarea id="message" name="message" rows="3" 
+                                              class="form-textarea" placeholder="Tell us about your project..."></textarea>
+                                </div>
+                                
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <label for="consent">
+                                        I agree to receive emails about product updates and offers.
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                    <span class="btn-text">Get Early Access</span>
+                                    <span class="spinner" id="spinner" aria-hidden="true"></span>
+                                </button>
+                                
+                                <div id="form-message" class="form-message"></div>
+                            </form>
+                            
+                            <p class="form-footer">
+                                By submitting, you agree to our terms. We respect your privacy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Stats -->
+            <div class="performance-stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div class="stat-value">95-100</div>
+                            <div class="stat-label">Lighthouse Score</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">0.3s</div>
+                            <div class="stat-label">TTFB</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">100/100</div>
+                            <div class="stat-label">Core Web Vitals</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">99.9%</div>
+                            <div class="stat-label">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features" aria-label="Features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Our Solution</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">⚡</div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-description">Optimized for Core Web Vitals with perfect Lighthouse scores.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📱</div>
+                        <h3 class="feature-title">Fully Responsive</h3>
+                        <p class="feature-description">Flawless experience on all devices from mobile to desktop.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔍</div>
+                        <h3 class="feature-title">SEO Optimized</h3>
+                        <p class="feature-description">Built-in SEO features and schema.org structured data.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🚀</div>
+                        <h3 class="feature-title">Easy Deployment</h3>
+                        <p class="feature-description">Deploy to Vercel, Netlify, or any static host in minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" aria-label="Contact">
+            <div class="container">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="section-subtitle">Join thousands of developers building faster websites</p>
+                <a href="#lead-form" class="btn btn-primary btn-xl">Start Your Free Trial</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="footer-logo-icon" aria-hidden="true">🚀</span>
+                        <span class="footer-logo-text">HighPerf<span class="logo-dot">.</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Building high-performance web experiences with perfect Lighthouse scores.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span class="social-icon">𝕏</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <span class="social-icon">🐙</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="social-icon">in</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Links -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#api">API</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Links -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/docs">Documentation</a></li>
+                        <li><a href="/guides">Guides</a></li>
+                        <li><a href="/community">Community</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/impressum">Impressum</a></li>
+                        <li><a href="/datenschutz">Datenschutz</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; <span id="current-year">2024</span> HighPerf. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="/sitemap.xml">Sitemap</a>
+                    <a href="/rss.xml">RSS</a>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                        <span class="theme-text">Dark Mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Local Business Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "HighPerf",
+            "description": "High-performance web development solutions",
+            "url": "https://your-domain.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Tech Street",
+                "addressLocality": "San Francisco",
+                "addressRegion": "CA",
+                "postalCode": "94107",
+                "addressCountry": "US"
+            },
+            "telephone": "+1-555-123-4567",
+            "openingHours": "Mo-Fr 09:00-17:00"
+        }
+        </script>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+    
+    <!-- Inline critical JS for performance -->
+    <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Initialize theme from localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-theme');
+    }
+    </script>
+</body>
+</html>
